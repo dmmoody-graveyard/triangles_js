@@ -6,4 +6,8 @@ describe('triangles', function() {
 	it('takes three line lengths and returns equilateral', function() {
 		expect(triangles(3, 3, 3)).to.equal('equilateral');
 	});
+
+	it('takes three line lengths and returns isosceles', function() {
+		expect(triangles(3, 3, 5)).to.equal('isosceles');
+	});
 });
