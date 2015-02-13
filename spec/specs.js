@@ -10,4 +10,8 @@ describe('triangles', function() {
 	it('takes three line lengths and returns isosceles', function() {
 		expect(triangles(3, 3, 5)).to.equal('isosceles');
 	});
+
+	it('takes three line lenths and returns scalene', function () {
+		expect(triangles(3, 4, 5)).to.equal('scalene');
+	});
 });
