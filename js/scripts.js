@@ -17,7 +17,13 @@ $(document).ready(function() {
 		var side3 = parseInt($('input#side3').val());
 		var result = triangles(side1, side2, side3);
 
-		$('.result').text(result);
+		if (result === false) {
+			$('.result').text('you can not make a triangle.');
+		} else if (result === 'scalene') {
+			$('.result').text("you have a " + result + ".");
+		} else {
+			$('.result').text("you have an " + result + ".");
+		}
 
 		$('#result').show()
 		event.preventDefault();
