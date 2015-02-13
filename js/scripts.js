@@ -18,12 +18,36 @@ $(document).ready(function() {
 		var result = triangles(side1, side2, side3);
 
 		if (result === false) {
-			$('.result').text('you can not make a triangle.');
-		} else if (result === 'scalene') {
-			$('.result').text("you have a " + result + ".");
+			$('.no').show();
+			$('.yes').hide();
+			$('.scalene').hide();
+			$('.isosceles').hide();
+			$('.equilateral').hide();	
 		} else {
-			$('.result').text("you have an " + result + ".");
+			$('.no').hide();
+			$('.yes').show();
+			if (result === 'scalene') {
+				$('.result').text("a " + result).show();
+				$('.scalene').show();
+				$('.isosceles').hide();
+				$('.equilateral').hide();
+			} else {
+				$('.result').text("an " + result).show();
+				if (result == 'isosceles') {
+					$('.scalene').hide();
+					$('.isosceles').show();
+					$('.equilateral').hide();
+				} else {
+					$('.scalene').hide();
+					$('.isosceles').hide();
+					$('.equilateral').show();					
+				}
+			}
 		}
+
+		$('.side1').text(side1);
+		$('.side2').text(side2);
+		$('.side3').text(side3);
 
 		$('#result').show()
 		event.preventDefault();

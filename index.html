@@ -15,16 +15,23 @@
 
 		<form id="sides">
 			<div class="form-group">
-				<input type="text" id="side1" placeholder="Enter side one">
-				<input type="text" id="side2" placeholder="Enter side two">				
-				<input type="text" id="side3" placeholder="Enter side three">
+				<input type="text" id="side1" placeholder="Enter side one" required>
+				<input type="text" id="side2" placeholder="Enter side two" required>				
+				<input type="text" id="side3" placeholder="Enter side three" required>
 			</div>
 
 			<button class="btn btn-default" type="submit">Let's See!</button>
 		</form>
-
+	<hr>
 		<div id="result">
-			<p class="lead">With the lengths you entered, <span class="result"></span></p>
+			<p class="lead">The lengths you entered (<span class="side1"></span>, <span class="side2"></span>, and <span class="side3"></span>) <span class="no">can not make a triangle</span><span class="yes">can make <span class="result"></span> triangle</span>.</p>
+
+			<blockquote>
+				<p class="lead no">The general rule to make a triangle is the sum of any two sides can not be less than the third remaining side.</p>
+				<p class="lead scalene">By definition, a scalene triangle is where no one side is equal to another side.</p>
+				<p class="lead equilateral">By definition, an equilateral triangle is where all three sides are equal.</p>
+				<p class="lead isosceles">By definition, an isosceles triangle is where exactly two (2) sides are equal.</p>
+			</blockquote>
 		</div>
 	</div>
 </body>
