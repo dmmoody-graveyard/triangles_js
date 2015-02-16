@@ -13,11 +13,6 @@ Install Triangles_js by first cloning the repository.
 $ git clone http://github.com/dmmoody/triangles_js
 ```
 
-Install all of the required gems:
-```
-$ bundle install
-```
-
 Running the app
 ---------------
 
